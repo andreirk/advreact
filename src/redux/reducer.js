@@ -8,10 +8,10 @@ import {ADD_PERSON} from '../ducks/people'
 export default combineReducers({
     router,
     form: formReducer.plugin({
-        people: (state, action) => { // <------ 'account' is name of form given to reduxForm()
+        people: (state, action) => { 
         switch(action.type) {
             case ADD_PERSON:
-                return undefined;       // <--- blow away form data
+                return undefined;    
             default:
                 return state;
         }
